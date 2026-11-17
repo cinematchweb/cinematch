@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#09090d">
+<meta name="description" content="CineMatch: descubre películas y encuentra historias que te gustan.">
+<title>CineMatch — Prototipo V1.1</title>
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <div class="wordmark">Cine<span>Match</span></div>
+    <div class="topright">
+      <button class="iconbtn" aria-label="Buscar" data-action="go-explore">⌕</button>
+      <button class="avatar" aria-label="Abrir perfil" data-action="go-profile">C</button>
+    </div>
+  </header>
+  <main id="main" aria-live="polite"></main>
+  <nav class="bottom" aria-label="Navegación principal">
+    <div class="nav" id="nav">
+      <button class="active" data-page="home"><strong>⌂</strong>Inicio</button>
+      <button data-page="explore"><strong>⌕</strong>Explorar</button>
+      <button data-page="discover"><strong>✧</strong>Descubrir</button>
+      <button data-page="match"><strong>♡</strong>Match</button>
+      <button data-page="profile"><strong>◉</strong>Perfil</button>
+    </div>
+  </nav>
+</div>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
