@@ -39,3 +39,12 @@ reales y comprobados de creación y modificación.
 
 No inventar migraciones ni asumir que una consulta
 ejecutada correctamente representa toda la configuración.
+
+## Automatización de perfiles
+
+Se verificó directamente en Supabase que existe el trigger
+`on_auth_user_created` sobre `auth.users`, después de cada INSERT.
+Este ejecuta `public.handle_new_user()` para crear el perfil
+correspondiente en `public.profiles`.
+
+No se creó una migración porque el trigger ya estaba instalado.
