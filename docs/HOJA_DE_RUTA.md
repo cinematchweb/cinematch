@@ -14,29 +14,36 @@ películas, encontrar coincidencias y compartir gustos.
 - [x] Crear repositorio GitHub.
 - [x] Conservar ZIP original de respaldo.
 
-## FASE 2 — Supabase
+## FASE 2 — Supabase y base de datos
 - [x] Crear proyecto Supabase.
 - [x] Obtener URL del proyecto.
 - [x] Preparar tabla profiles.
 - [x] Relacionar profiles.id con auth.users.id.
 - [x] Configurar políticas RLS iniciales.
-- [x] Habilitar registro por correo.
-- [ ] Verificar todas las políticas RLS.
-- [ ] Verificar creación automática de perfiles.
-- [ ] Probar registro e inicio de sesión.
-- [ ] Probar recuperación de contraseña.
+- [x] Revisar las políticas RLS existentes.
+- [x] Verificar trigger de creación automática de perfiles.
+- [x] Verificar función handle_new_user().
+- [x] Crear y verificar vista public_profiles.
+- [x] Restringir permisos de acceso a las columnas previstas.
+- [x] Respaldar migración 002_public_profiles_view.sql.
+- [ ] Conectar el frontend con Supabase.
+- [ ] Probar las operaciones de base de datos desde la aplicación.
 
 ## FASE 3 — Autenticación
 - [x] Preparar autenticación por correo.
 - [x] Crear proyecto Google Cloud cinematchweb.
-- [ ] Finalizar autenticación por correo.
+- [ ] Conectar autenticación por correo al frontend.
+- [ ] Probar registro de usuarios.
+- [ ] Probar inicio y cierre de sesión.
+- [ ] Probar creación automática de perfiles con registros reales.
+- [ ] Implementar y probar recuperación de contraseña.
 - [ ] Configurar Google OAuth.
 - [ ] Obtener Client ID y Client Secret.
 - [ ] Conectar Google con Supabase.
 - [ ] Probar inicio de sesión con Google.
 
 Nota: Google OAuth queda aplazado hasta tener
-el dominio público de CineMatch.
+el dominio público y completar los requisitos legales.
 
 ## FASE 4 — Películas y contenido
 - [x] Preparar catálogo de demostración.
@@ -49,11 +56,13 @@ el dominio público de CineMatch.
 - [ ] Integrar noticias reales.
 - [ ] Implementar recomendaciones dinámicas.
 
-## FASE 5 — Sistema Match
+## FASE 5 — Perfiles y sistema Match
 - [x] Preparar pantalla Match.
 - [x] Preparar interés y descarte local.
-- [ ] Crear coincidencias reales.
+- [x] Preparar estructura de perfiles en Supabase.
+- [ ] Conectar consulta y edición de perfiles.
 - [ ] Conectar preferencias con Supabase.
+- [ ] Crear coincidencias reales.
 - [ ] Implementar recomendaciones personalizadas.
 - [ ] Probar coincidencias entre usuarios.
 
@@ -72,7 +81,7 @@ el dominio público de CineMatch.
 - [ ] Probar aplicación en Android.
 - [ ] Corregir errores visuales.
 - [ ] Verificar navegación y botones.
-- [ ] Probar autenticación.
+- [ ] Probar autenticación completa.
 - [ ] Verificar seguridad de Supabase.
 - [ ] Probar catálogo, noticias y Match.
 - [ ] Optimizar velocidad y consumo de datos.
@@ -95,15 +104,16 @@ el dominio público de CineMatch.
 - [ ] Soporte para más idiomas.
 
 ## Orden de ejecución
-1. Terminar Supabase.
-2. Conectar autenticación por correo.
-3. Conectar perfiles.
-4. Integrar películas y noticias.
-5. Implementar Match real.
-6. Crear documentos legales.
-7. Probar la aplicación.
-8. Publicar versión de prueba.
-9. Activar Google OAuth.
+1. Completar la documentación y los respaldos.
+2. Conectar Supabase al frontend.
+3. Implementar y probar autenticación por correo.
+4. Conectar consulta y edición de perfiles.
+5. Integrar películas y noticias.
+6. Implementar preferencias y Match real.
+7. Crear documentos legales.
+8. Realizar pruebas integrales.
+9. Configurar dominio y publicar versión de prueba.
+10. Activar Google OAuth.
 
 ## Reglas del proyecto
 - Priorizar herramientas gratuitas.
@@ -112,3 +122,4 @@ el dominio público de CineMatch.
 - Mantener estructura modular.
 - Registrar los cambios importantes en GitHub.
 - Actualizar esta hoja de ruta conforme avancemos.
+- No marcar como completadas funciones que no hayan sido probadas.

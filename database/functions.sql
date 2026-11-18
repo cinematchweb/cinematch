@@ -1,6 +1,10 @@
--- CineMatch: función existente en Supabase.
--- No se encontró ningún trigger asociado a esta función
--- durante la consulta del 18-11-2026.
+-- CineMatch: función de creación automática de perfiles.
+-- Verificada en Supabase el 18-11-2026.
+-- El trigger on_auth_user_created la ejecuta AFTER INSERT
+-- sobre auth.users.
+-- La función utiliza SECURITY DEFINER y search_path vacío.
+-- Este archivo documenta la función existente; revisar antes
+-- de ejecutarlo en una base de datos.
 
 CREATE OR REPLACE FUNCTION public.handle_new_user()
 RETURNS trigger
